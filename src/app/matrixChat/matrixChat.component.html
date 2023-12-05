@@ -1,0 +1,12 @@
+<div class="chat container">
+  <div *ngFor="let msg of session">
+    <c-chat-msg
+      [message]="msg"
+      (eventOptionSelected)="onOptionSelected($event)"
+    ></c-chat-msg>
+  </div>
+
+  <div class="msg-writing" *ngIf="writing">Mõtlen pisut...</div>
+</div>
+<br>
+<br>
